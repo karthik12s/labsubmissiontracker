@@ -12,7 +12,7 @@ os.environ['TZ'] = 'Asia/Kolkata' # set new timezone
 time.tzset()
 time.localtime()
 from pymongo import MongoClient
-client = MongoClient("mongodb+srv://admin:bzhandles@datastore.rzoau.mongodb.net/myFirstDatabase&retryWrites=true&w=majority",ssl_cert_reqs=ssl.CERT_NONE)
+client = MongoClient("mongodb+srv://admin:bzhandles@datastore.rzoau.mongodb.net/myFirstDatabase&retryWrites=true&w=majority")#,ssl_cert_reqs=ssl.CERT_NONE)
 
 app = Flask(__name__)
 
