@@ -96,22 +96,23 @@
             <div class="col-md-6">
                 <form action="/batch/{{name}}" method="post">
                 
-                    <input name = 'start' list = "start_time" placeholder="Start time">
-                    <input  name="end" list="end_time" placeholder="End time">
-                    <datalist id="start_time">
+                    <label  list = "start_time" placeholder="Start time">Start Time</label>
+                   
+                    <select id="start_time" name = 'start'>
                         {%for i in date_time%}
-                        <option value="{{i}}">
+                        <option value="{{i}}">{{i}}</option>
                         {%endfor%}
-                    </datalist>
-                    <datalist id="end_time">
+                        </select> 
+                    <label   list="end_time" placeholder="End time">End time</label>
+                    <select id="end_time" name="end">
                         {%for i in date_time%}
-                        <option value="{{i}}">
+                        <option value="{{i}}">{{i}}</option>
                         {%endfor%}
-                    </datalist>
+                        </select>
                   <button class="btn btn-primary" type="submit">Fetch results</button>
                 </form>
             </div>
-            <button class="btn btn-default" data-toggle="confirmation">Confirmation</button>
+            <!-- <button class="btn btn-default" data-toggle="confirmation">Confirmation</button> -->
         </div>
             <table id="example" class="stripe row-border order-column display" style="width:100%">
                 <thead>
