@@ -127,7 +127,7 @@ def scrape(name):
     if date in l[i]['submissions']: 
       l[i]['submissions'][date][c_time] = l1[i]
     else:
-      l[i]['submissions'] = {date:{c_time:l1[i]}}
+      l[i]['submissions'][date] = {c_time:l1[i]}
   for i in l:
     col.update_one({"UserName":i['UserName']},{"$set":{'submissions':i['submissions']}})
   col = db['Time']
